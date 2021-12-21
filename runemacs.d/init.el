@@ -5,7 +5,7 @@
 ;; Adapted from the System Crafter's getting-started config, video 3:
 ;;   https://github.com/daviwil/emacs-from-scratch/blob/82d24eea516e7799ead20cf068542e2b5ecb270e/init.el
 
-(defvar runemacs/default-font-size 180)
+(defvar runemacs/default-font-size 115)
 
 (setq inhibit-startup-message t)
 
@@ -21,7 +21,8 @@
 ;; SET up the visible bell
 (setq visible-bell t)
 
-(set-face-attribute 'default nil :font "Fira Code Retina" :height runemacs/default-font-size)
+;; Menlo is the default font of the alacritty terminal
+(set-face-attribute 'default nil :font "Menlo" :height runemacs/default-font-size)
 
 ;; Initialize package sources
 (require 'package)

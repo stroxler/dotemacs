@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 EMACS_VARIANT=runemacs
 
@@ -6,6 +7,6 @@ EMACS_VARIANT=runemacs
 mkdir -p "${HOME}/.editor_logs"
 LOGFILE="${HOME}/.editor_logs/{EMACS_VARIANT}.log"
 
-export EMACSDIR="${HOME}/${EMACS_VARIANT}"
+export EMACSDIR="${HOME}/${EMACS_VARIANT}.d"
 
 nohup emacs "$@" </dev/null >"${LOGFILE}" 2>&1 &
